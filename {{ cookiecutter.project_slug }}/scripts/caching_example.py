@@ -10,9 +10,8 @@ df['day'] = pd.to_datetime(df['day'])
 df['temp'] = (df.temp_min + df.temp_max) / 2
 
 write_cache_pickle(df, cache_filename)
-
 logger.info(str(df.shape[0]) + " rows written to " + cache_filename)
 
 read_df = read_cache_pickle(cache_filename)
-
 logger.info(str(read_df.shape[0]) + " rows read from " + cache_filename)
+print(read_df)
