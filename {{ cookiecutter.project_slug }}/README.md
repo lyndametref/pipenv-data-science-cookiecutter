@@ -4,7 +4,7 @@
 
 ## Project structure
 ```
-project_folder
+{{ cookiecutter.project_slug }}
 ├── cache          <- where cache files are saved (not committed)
 ├── data           <- to store data
 ├── logs           <- where logs are saved (not committed)
@@ -18,8 +18,7 @@ project_folder
 ├── .gitignore
 ├── Pipfile         <- to configure which package to install 
 ├── README.md
-└── setup.py        <- setup script for the project
-
+└── setup_env.py        <- script to setup project's environment variables
 ```
 
 ## Installation 
@@ -30,5 +29,5 @@ Insure python and pipenv are installed:
 
 Copy template and run in project folder:
 
-    $ pyhton setup.py            # setup local pipenv environment variables
+    $ pyhton setup_env.py        # setup local pipenv environment variables
     $ pipenv install             # --dev to include test packages

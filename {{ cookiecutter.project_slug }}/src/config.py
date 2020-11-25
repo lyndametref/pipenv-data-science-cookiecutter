@@ -11,7 +11,7 @@ def get_config() -> configparser.ConfigParser:
         config.read(config_file)
     else:
         raise EnvironmentError("Environment variable CONFIG_PATH is not set or config file is missing, "
-                               "try run setup.py to set it")
+                               "try run setup_env.py to set it")
 
     return config
 
