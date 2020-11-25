@@ -1,0 +1,7 @@
+{
+  "project_name": "Project name",
+  "project_slug": "{{ cookiecutter.project_name.lower().replace(' ', '_') }}",
+  "project_description": "A short description of the project. Will be include in the README.md file.",
+  "use_jupyter": ["y","n"],
+  "python_version": "3.8"
+}

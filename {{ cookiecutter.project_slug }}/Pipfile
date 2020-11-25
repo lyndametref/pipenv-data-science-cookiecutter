@@ -1,0 +1,14 @@
+[[source]]
+url = "https://pypi.python.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+{% if cookiecutter.use_jupyter == 'y' %}jupyter = "*"{% endif %}
+pandas = "*"
+
+[dev-packages]
+pytest = "*"
+
+[requires]
+python_version = "{{ cookiecutter.python_version }}"
