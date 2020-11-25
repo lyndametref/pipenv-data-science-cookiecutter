@@ -4,8 +4,8 @@ verify_ssl = true
 name = "pypi"
 
 [packages]
-{% if cookiecutter.use_jupyter == 'y' %}jupyter = "*"{% endif %}
 pandas = "*"
+{% if cookiecutter.use_jupyter == 'y' %}jupyter = "*"{% endif %}
 
 [dev-packages]
 pytest = "*"
