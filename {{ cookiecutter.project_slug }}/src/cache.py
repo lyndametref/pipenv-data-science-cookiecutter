@@ -5,6 +5,8 @@ from src.config import get_path
 
 def write_cache_pickle(df: pd.DataFrame, filename: str):
     cache_path = get_path('cache_path')
+    if os.path.isdir(cache_path) is False:
+        os.makedirs(cache_path)
     filepath = os.path.join(cache_path, filename)
     df.to_pickle(filepath)
 

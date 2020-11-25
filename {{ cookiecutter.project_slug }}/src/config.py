@@ -31,9 +31,10 @@ def get_path(path_type: str) -> str:
 
 def set_log_config(filename: str) -> logging:
     config = get_config()
-    logfile = os.path.join(get_path('logs_path'), os.path.basename(filename) + ".log")
-    print(filename)
-    print(logfile)
+    logs_path = get_path('logs_path')
+    if os.path.isdir(logs_path) is False:
+        os.makedirs(logs_path)
+    logfile = os.path.join(logs_path, os.path.basename(filename) + ".log")
     if 'logs' in config.sections():
         log_config = config['logs']
         log_level = getattr(logging, log_config.get('level'))
