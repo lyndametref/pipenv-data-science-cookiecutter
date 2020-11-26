@@ -39,6 +39,11 @@ Notes:
  
 ## Use
 
+This project use pipenv, thus run the following command in the project folder to activate the created environment:
+```
+$ pipenv shell
+```
+
 ### Configuration
 You can create configuration parameters by modifying or extending `config.ini`. All configuration parameters set in
    `config.ini` are available through the `get_config()` function which must be imported with `from src.config import
